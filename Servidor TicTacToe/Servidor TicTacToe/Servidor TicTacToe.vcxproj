@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{0182CC4A-C680-475A-8A95-3A25C3FB1DF1}</ProjectGuid>
+    <ProjectGuid>{5B7094E4-B1CB-43D1-B112-DF49CBF31772}</ProjectGuid>
     <RootNamespace>ServidorTicTacToe</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
