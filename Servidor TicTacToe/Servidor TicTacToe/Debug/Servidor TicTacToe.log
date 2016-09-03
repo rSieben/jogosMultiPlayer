@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\temp\visual studio 2015\projects\jogosmultiplayer\servidor tictactoe\servidor tictactoe\source.cpp(81): warning C4101: 'clienteSocket': unreferenced local variable
+  Servidor TicTacToe.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\Servidor TicTacToe\Debug\Servidor TicTacToe.exe
+  Servidor TicTacToe.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\Servidor TicTacToe\Debug\Servidor TicTacToe.pdb (Partial PDB)
