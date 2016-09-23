@@ -1,0 +1,5 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (base.vcxproj, ch01.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Source.cpp
+c:\temp\sfml\exemplo\exemplo\megaman.h(39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  exemplo.vcxproj -> C:\Temp\SFML\exemplo\x64\Debug\exemplo.exe
+  exemplo.vcxproj -> C:\Temp\SFML\exemplo\x64\Debug\exemplo.pdb (Partial PDB)
