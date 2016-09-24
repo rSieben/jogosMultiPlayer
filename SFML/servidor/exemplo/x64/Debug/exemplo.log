@@ -1,7 +1,7 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (base.vcxproj, ch01.vcxproj).  This can lead to incorrect clean and rebuild behavior.
   Source.cpp
-c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\exemplo\exemplo\megaman.h(39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\exemplo\exemplo\mouse.h(30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\exemplo\exemplo\mouse.h(33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-  exemplo.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\SFML\exemplo\x64\Debug\exemplo.exe
-  exemplo.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\SFML\exemplo\x64\Debug\exemplo.pdb (Partial PDB)
+c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\servidor\exemplo\megaman.h(39): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\servidor\exemplo\mouse.h(30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+c:\temp\visual studio 2015\projects\jogosmultiplayer\sfml\servidor\exemplo\mouse.h(33): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  exemplo.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\SFML\servidor\x64\Debug\exemplo.exe
+  exemplo.vcxproj -> C:\Temp\Visual Studio 2015\Projects\jogosMultiPlayer\SFML\servidor\x64\Debug\exemplo.pdb (Partial PDB)
