@@ -14,13 +14,31 @@ private:
 	std::vector<sf::IntRect> m_frames;
 
 public:
+
 	Mouse(sf::RenderWindow* janela)
 		: m_janela(janela)
 	{
 		bool r;
 		r = m_textura.loadFromFile("mouse.png");
 		m_sprite.setTexture(m_textura);
+		m_sprite.setScale(0.1,0.1);
 		m_frames.push_back(sf::IntRect(0,0,17,25));
+	}
+
+	void SetSprite(std::string file= "mouse.png") {
+		m_textura.loadFromFile(file);
+	}
+
+	void SetPosition(int posX, int posY) {
+		m_sprite.setPosition(posX, posY);
+	}
+
+	int GetPositionX() {
+		return sf::Mouse::getPosition(*m_janela).x;
+	}
+
+	int GetPositionY() {
+		return sf::Mouse::getPosition(*m_janela).y;
 	}
 
 	void Atualizar(const sf::Time & tempo)

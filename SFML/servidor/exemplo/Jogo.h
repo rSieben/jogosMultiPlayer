@@ -18,6 +18,7 @@ private:
 public :
 	WSAData wsaData;
 	SOCKET servidorSocket;
+	SOCKET socket_CONNECTION;
 	sockaddr_in servidorEndereco;
 	Jogo(int largura,
 		 int altura,
@@ -30,20 +31,6 @@ public :
 	{
 		
 	}
-	
-	void ProcessarEventos()
-	{
-		sf::Event evento;
-		while (m_janela.pollEvent(evento))
-		{
-			switch (evento.type)
-			{
-				case sf::Event::Closed:
-					m_janela.close();
-					break;
-			}
-		}
-	}
 
 	void Rodar() 
 	{
@@ -53,6 +40,7 @@ public :
 			
 		WSAStartup(MAKEWORD(2, 2), &wsaData);
 
+		socket_CONNECTION = socket(AF_INET, SOCK_DGRAM, NULL);
 		servidorSocket = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
 		servidorEndereco.sin_family = AF_INET;
@@ -60,35 +48,16 @@ public :
 		InetPton(AF_INET, "0.0.0.0", &servidorEndereco.sin_addr.s_addr);
 
 		bind(servidorSocket, (SOCKADDR*)&servidorEndereco, sizeof(sockaddr_in));
+		listen(servidorSocket, SOMAXCONN);
 
-		while (m_janela.isOpen())
-		{
-			ProcessarEventos();
-			tempoDesdeUltimaAtualizacao += relogio.restart();
-
-			while (tempoDesdeUltimaAtualizacao > m_tempoPorFrame)
-			{
-				tempoDesdeUltimaAtualizacao -= m_tempoPorFrame;
-				ProcessarEventos();
-				Atualizar(m_tempoPorFrame);
+		for (;;) {
+			std::cout << "Esperando conexao" << std::endl;
+			char msg[100] = "mouse x e y";
+			int servidorEnderecoSize = sizeof(servidorEndereco);
+			if (socket_CONNECTION = accept(servidorSocket, (SOCKADDR*)&servidorEndereco, &servidorEnderecoSize)) {
+				send(socket_CONNECTION, msg, sizeof(msg), NULL);
 			}
-
-			Renderizar();
 		}
-
 	}
 
-	void Atualizar(const sf::Time& tempo)
-	{
-		m_megaman.Atualizar(tempo);
-		m_mouse.Atualizar(tempo);
-	}
-
-	void Renderizar()
-	{
-		m_janela.clear();
-		m_megaman.Desenhar();
-		m_mouse.Desenhar();
-		m_janela.display();
-	}
 };
