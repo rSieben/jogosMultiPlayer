@@ -1,7 +1,11 @@
 #pragma once
+
 #include <SFML\Graphics.hpp>
 #include "Megaman.h"
 #include "Mouse.h"
+#include <iostream>
+#include <WinSock2.h>
+#include <WS2tcpip.h>
 
 class Jogo
 {
